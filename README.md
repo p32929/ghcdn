@@ -4,9 +4,7 @@ A Next.js application that serves GitHub and Gist content as a CDN. This easy-to
 
 ## Screenshots
 
-![Image](https://github.com/user-attachments/assets/c74c6f35-5353-4eca-95be-1db5165b0fcb)
-
-![Image](https://github.com/user-attachments/assets/3a4d0f6f-9a2f-4105-ae12-0c87f12d3672)
+<img width="1920" height="922" alt="Image" src="https://github.com/user-attachments/assets/c7498506-48b5-46b6-898e-da8caca8d6af" />
 
 ## Features
 
