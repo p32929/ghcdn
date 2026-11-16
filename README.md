@@ -1,6 +1,6 @@
-# GitHub CDN
+# GitHub CDN (ghcdn)
 
-Paste a GitHub file or Gist URL, get a CDN URL you can drop straight into a `<script>`, `<link>` or `fetch()`. Self-hostable Next.js app — a jsDelivr-style alternative you run yourself.
+Use any file from GitHub or a Gist straight in a web page. Paste the GitHub or Gist link and you get a CDN link you can drop into a `<script>`, a `<link>` or a `fetch()`. Browsers won't run a script or load a stylesheet straight from a GitHub page, so ghcdn serves the file with the right type and caches it. It works like jsDelivr, but you host it yourself, so you decide what it serves and you are not tied to anyone else's service.
 
 **Live:** https://ghcdn.vercel.app
 
@@ -10,12 +10,11 @@ Paste a GitHub file or Gist URL, get a CDN URL you can drop straight into a `<sc
 
 ## Features
 
-- Serve GitHub repository files directly via CDN URL
-- Serve Gist content directly via CDN URL
-- Memory-efficient caching for faster delivery
-- Purge cached content when needed
-- Modern, responsive UI with excellent user experience
-
+1. **Files from any public repo,** by branch and path.
+2. **Gists too,** with the same short links.
+3. **Fast repeat loads:** files are cached, so the next request does not go back to GitHub.
+4. **Purge when you change a file,** so the new version shows right away.
+5. **Host it anywhere** that runs Next.js, with one click on Vercel, Netlify, Railway and others.
 ## URL Format
 
 ### GitHub Repository Files
@@ -90,8 +89,8 @@ GitHub CDN has some limitations you should be aware of:
 
 ### Prerequisites
 
-- Node.js 18.x or later
-- npm or yarn
+1. Node.js 18.x or later
+2. npm or yarn
 
 ### Installation
 
@@ -137,29 +136,7 @@ Deploy GitHub CDN with one click to your preferred platform:
 
 [![Deploy to Amplify](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/p32929/ghcdn) [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/p32929/ghcdn&branch=main&name=github-cdn)
 
-### Additional Platforms
-
-- **Cloudflare Pages**: Fork the repo and import it in [Cloudflare Pages](https://pages.cloudflare.com/)
-- **Fly.io**: Run `fly launch` in the cloned repository
-- **Cyclic**: Import from [Cyclic Dashboard](https://app.cyclic.sh/) 
-- **Northflank**: Create project from [Northflank](https://app.northflank.com/)
-- **Deta Space**: Use `space push` after installing [Space CLI](https://deta.space/docs/en/build/reference/cli)
-- **Replit**: Import directly from [Replit](https://replit.com/github/p32929/ghcdn)
-- **Glitch**: Remix on [Glitch](https://glitch.com/edit/#!/import/github/p32929/ghcdn)
-- **Surge.sh**: Deploy with `surge` after building locally
-- **GitHub Pages**: Use GitHub Actions for deployment (static export required)
-- **Azure Static Web Apps**: Deploy via [Azure Portal](https://portal.azure.com/#create/Microsoft.StaticApp)
-
-All platforms will auto-detect Next.js and apply appropriate build settings. No additional configuration files needed!
-
-### Docker
-
-Run with Docker:
-
-```bash
-docker build -t ghcdn .
-docker run -p 3000:3000 -e GITHUB_TOKEN=your_token ghcdn
-```
+You can also import the repo on any other host that runs Next.js, such as Cloudflare Pages or Fly.io.
 
 ### Environment Variables
 
@@ -175,43 +152,12 @@ MIT License — Copyright (c) 2025 Fayaz Bin Salam. See [LICENSE](LICENSE) for t
 
 ## Contributing
 
-Contributions are warmly welcomed and greatly appreciated! Whether it's a bug fix, new feature, or improvement, your input helps make this project better for everyone.
-
-Before submitting a pull request, please:
-
-1. Create an issue describing the feature or bug fix you'd like to work on
-2. Wait for discussion and approval to ensure alignment with project goals
-3. Fork the repository and create your feature branch
-4. Submit your pull request with a clear description of changes
-
-This approach helps avoid duplicate efforts and ensures smooth collaboration. Thank you for considering contributing!
+Contributions are very welcome, thank you! Before you start on a pull request, please open an issue and tell me what you would like to add or change. That way we can agree on it first, and your time is not wasted on something that might not fit. Thanks for helping make ghcdn better.
 
 ## Share
 
-Sharing this repository with your friends is just one click away from here
+<a href="https://p32929.github.io/share/?repo=ghcdn"><img src="https://p32929.github.io/readme/share.svg" alt="Share this with your friends in just a click" width="420"></a>
 
-[![facebook](https://user-images.githubusercontent.com/6418354/179013321-ac1d1452-0689-493f-9066-940cf2302b6e.png)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/p32929/ghcdn/)
-[![twitter](https://user-images.githubusercontent.com/6418354/179013351-7d8d6d1c-4ce2-46ab-bef8-4c4765a1b888.png)](https://twitter.com/intent/tweet?url=https://github.com/p32929/ghcdn/)
-[![tumblr](https://user-images.githubusercontent.com/6418354/179013343-3111f55a-3b90-40c7-8487-9777348672b0.png)](https://www.tumblr.com/share?v=3&u=https://github.com/p32929/ghcdn/)
-[![pocket](https://user-images.githubusercontent.com/6418354/179013334-b095c45f-becf-49f4-9ee1-5a731a9b1f85.png)](https://getpocket.com/save?url=https://github.com/p32929/ghcdn/)
-[![pinterest](https://user-images.githubusercontent.com/6418354/179013331-44cd9206-11b1-4b65-becb-5863b61c828f.png)](https://pinterest.com/pin/create/button/?url=https://github.com/p32929/ghcdn/)
-[![reddit](https://user-images.githubusercontent.com/6418354/179013338-7416ae3f-73ba-4522-86e1-1374d7082d22.png)](https://www.reddit.com/submit?url=https://github.com/p32929/ghcdn/)
-[![linkedin](https://user-images.githubusercontent.com/6418354/179013327-ca7b7102-1da8-4b1c-858f-1a6e5f21bd70.png)](https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/p32929/ghcdn/)
-[![whatsapp](https://user-images.githubusercontent.com/6418354/179013353-f477fa0b-3e6f-4138-a357-c9991b23ff88.png)](https://api.whatsapp.com/send?text=https://github.com/p32929/ghcdn/)
+## Support
 
-<!-- hire-block -->
-
----
-
-## 💼 Using this at a company?
-
-I do fixed-price delivery work on my own projects. One invoice, one date, no hourly billing:
-
-| | |
-|---|---|
-| **White-label build** — this project rebranded, extended and deployed as yours | **$6,500** · 3 weeks |
-| **Custom app from scratch** on my own stack, signed and auto-updating | **$12,500** · 6 weeks |
-| **Production-hardening sprint** — 72 hours on this project, for your load and your security review | **$999** |
-| **Ongoing capacity** — one project-week of my time reserved every month | **$9,000 / month** |
-
-Full details → **[p32929.github.io/hire](https://p32929.github.io/hire/)** · Email **[fayazdevinbox@uberip.com](mailto:fayazdevinbox@uberip.com)** — scoping and quotes are free and I answer within one business day.
+<a href="https://p32929.github.io/support/"><img src="https://p32929.github.io/readme/support.svg" alt="If you like my works and want to support me, feel free to support" width="420"></a>
